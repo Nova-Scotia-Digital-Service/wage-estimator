@@ -1,0 +1,494 @@
+/*.search-box-button {
+	background-image: url(img/sprite-icons.svg);
+}
+
+.footer {
+	background-image: url(img/bg-footer.svg);
+}*/
+
+.btn-xxl-wide {
+    padding: 20px 32px;
+    font-size: 24px;
+    line-height: 1.33333;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 27px 15px;
+    min-width: 120px;
+}
+
+.btn-xxl-wide small {
+	font-size: 16px;
+}
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+
+    /*required for proper track sizing in FF*/
+    width: 100%;
+
+    margin: 10px 0 0;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #0b6bb5;
+    margin-top: -5px;
+}
+
+@media only screen and (max-width: 500px) {
+	input[type=range]::-webkit-slider-thumb {
+		height: 30px;
+		width: 30px;
+		margin-top: -12px;
+	}
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #0b6bb5;
+}
+
+@media only screen and (max-width: 500px) {
+	input[type=range]::-moz-range-thumb {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 20px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #0b6bb5;
+}
+
+@media only screen and (max-width: 500px) {
+	input[type=range]::-ms-thumb {
+		height: 30px;
+		width: 30px;
+        margin-top: 0;
+	}
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+
+.calc-row{
+   border-bottom: 1px solid grey;
+   margin-bottom: 5px;
+   padding: 10px 0 20px;
+}
+
+.col-info{
+  display: -ms-flexbox;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.colTotal{
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calcTotal {
+    width: 100%;
+    text-align: right;
+    font-size: 24px;
+    padding-top: 0;
+}
+
+.calcTotal::before {
+    content: "$";
+}
+.calcTotal.reduced::before {
+    content: "- $";
+}
+
+.reducedTotal{
+    font-weight: bold;
+}
+
+
+label span{
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.col-auto {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+
+.p-0 {
+    padding: 0!important;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.small-icon {
+	font-size: 2em;
+	color: #2750a0;
+}
+
+.align-self-end {
+   -ms-flex-item-align: end !important;
+   align-self: flex-end !important;
+}
+
+.align-items-end {
+  display: flex; -ms-flex-align: end !important;
+  align-items: flex-end !important;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+
+
+@media (max-width: 767px) {
+
+  .xs-block {
+      display: grid;
+      flex-wrap: wrap;
+  }
+}
+
+
+.safariRowFlexFix.container:before,
+.safariRowFlexFix.container:after,
+.safariRowFlexFix.row:before,
+.safariRowFlexFix.row:after,
+.safariRowFlexFix.container-fluid:before,
+.safariRowFlexFix.container-fluid:after {
+   content: normal;
+}
+
+
+@media (max-width: 767px){
+  .col-xs-2 {
+    width: 16.66666667%;
+    max-width: 16.6666667%;
+  }
+  .col-xs-3 {
+      width: 25%;
+      max-width: 25%;
+  }
+  .col-xs-4 {
+      width: 33.33333333%;
+      max-width: 33.333333%;
+  }
+  .col-md-5 {
+      width: 41.66%;
+      max-width: 41.66%;
+  }
+  .col-xs-6 {
+      width: 50%;
+      max-width: 50%;
+  }
+  .col-xs-7 {
+      width: 58.33%;
+      max-width: 58.33%;
+  }
+  .col-xs-8 {
+      width: 66.66666667%;
+      max-width: 66.66666667%;
+  }
+  .col-xs-9 {
+      width: 75%;
+      max-width: 75%;
+  }
+  .col-xs-10 {
+      width: 83.33%;
+      max-width: 83.33%;
+  }
+  .col-xs-11 {
+      width: 91.66%;
+      max-width: 91.66%;
+  }
+  .col-xs-12 {
+      width: 100%;
+      max-width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .col-sm-2 {
+    width: 16.66666667%;
+    max-width: 16.6666667%;
+  }
+  .col-sm-3 {
+      width: 25%;
+      max-width: 25%;
+  }
+  .col-sm-4 {
+      width: 33.33333333%;
+      max-width: 33.333333%;
+  }
+  .col-sm-5 {
+      width: 41.66%;
+      max-width: 41.66%;
+  }
+  .col-sm-6 {
+      width: 50%;
+      max-width: 50%;
+  }
+  .col-sm-7 {
+      width: 58.33%;
+      max-width: 58.33%;
+  }
+  .col-sm-8 {
+      width: 66.66666667%;
+      max-width: 66.66666667%;
+  }
+  .col-sm-9 {
+      width: 75%;
+      max-width: 75%;
+  }
+  .col-sm-10 {
+      width: 83.33%;
+      max-width: 83.33%;
+  }
+  .col-sm-11 {
+      width: 91.66%;
+      max-width: 91.66%;
+  }
+  .col-sm-12 {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 992px){
+  .col-md-2 {
+    width: 16.66666667%;
+    max-width: 16.6666667%;
+  }
+  .col-md-3 {
+      width: 25%;
+      max-width: 25%;
+  }
+  .col-md-4 {
+      width: 33.33333333%;
+      max-width: 33.333333%;
+  }
+  .col-md-5 {
+      width: 41.66%;
+      max-width: 41.66%;
+  }
+  .col-md-6 {
+      width: 50%;
+      max-width: 50%;
+  }
+  .col-md-7 {
+      width: 58.33%;
+      max-width: 58.33%;
+  }
+  .col-md-8 {
+      width: 66.66666667%;
+      max-width: 66.66666667%;
+  }
+  .col-md-9 {
+      width: 75%;
+      max-width: 75%;
+  }
+  .col-md-10 {
+      width: 83.33%;
+      max-width: 83.33%;
+  }
+  .col-md-11 {
+      width: 91.66%;
+      max-width: 91.66%;
+  }
+  .col-md-12 {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+  .col-lg-2 {
+    width: 16.66666667%;
+    max-width: 16.6666667%;
+  }
+  .col-lg-3 {
+      width: 25%;
+      max-width: 25%;
+  }
+  .col-lg-4 {
+      width: 33.33333333%;
+      max-width: 33.333333%;
+  }
+  .col-lg-5 {
+      width: 41.66%;
+      max-width: 41.66%;
+  }
+  .col-lg-6 {
+      width: 50%;
+      max-width: 50%;
+  }
+  .col-lg-7 {
+      width: 58.33%;
+      max-width: 58.33%;
+  }
+  .col-lg-8 {
+      width: 66.66666667%;
+      max-width: 66.66666667%;
+  }
+  .col-lg-9 {
+      width: 75%;
+      max-width: 75%;
+  }
+  .col-lg-10 {
+      width: 83.33%;
+      max-width: 83.33%;
+  }
+  .col-lg-11 {
+      width: 91.66%;
+      max-width: 91.66%;
+  }
+  .col-lg-12 {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 1530px){
+  .col-xl-2 {
+    width: 16.66666667%;
+    max-width: 16.6666667%;
+  }
+  .col-xl-3 {
+      width: 25%;
+      max-width: 25%;
+  }
+  .col-xl-4 {
+      width: 33.33333333%;
+      max-width: 33.333333%;
+  }
+  .col-xl-5 {
+      width: 41.66%;
+      max-width: 41.66%;
+  }
+  .col-xl-6 {
+      width: 50%;
+      max-width: 50%;
+  }
+  .col-xl-7 {
+      width: 58.33%;
+      max-width: 58.33%;
+  }
+  .col-xl-8 {
+      width: 66.66666667%;
+      max-width: 66.66666667%;
+  }
+  .col-xl-9 {
+      width: 75%;
+      max-width: 75%;
+  }
+  .col-xl-10 {
+      width: 83.33%;
+      max-width: 83.33%;
+  }
+  .col-xl-11 {
+      width: 91.66%;
+      max-width: 91.66%;
+  }
+  .col-xl-12 {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+legend {
+  font-size: 1em;
+}
+
+h2.h2 {
+  margin-bottom: 27px;
+}
+
+
+
